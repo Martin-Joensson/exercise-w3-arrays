@@ -91,10 +91,23 @@ addInThirdPlace()
 // ***BONUS***
 const theLongestName = () => {
   // find the pokemon with the longest name
-  pokemon.forEach((x) => {
-    let a = x.length
-    console.log(a)
-  })
+  
+  let longest = "";
+  const changeLongest = (a) => {
+    if (a.length > longest.length){
+      longest = a;
+    }
+    
+    //To check if there are several items with the same length. Maybe put in array?
+    //else if (longest.length == a.length){
+    //  longest2 = a;
+    //}
+  }
+  
+  pokemon.forEach(changeLongest);
+
+  console.log("Longest name:" + longest)
+  
 };
 
 theLongestName()
