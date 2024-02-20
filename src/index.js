@@ -1,4 +1,4 @@
-const pokemons = [
+const pokemon = [
   "Bulbasaur",
   "Ivysaur",
   "Venusaur",
@@ -11,46 +11,64 @@ const pokemons = [
   "Metapod",
   "Weedle",
   "Pikachu",
-  "Pidgey"
+  "Pidgey",
 ];
 
 const countThem = () => {
-  // print out, in a sentence, how many pokemons I have.
-  // like: "I have x pokemons!"
+  // print out, in a sentence, how many pokemon I have.
+  // like: "I have x pokemon!"
+  const numberOfPokemon = pokemon.length;
+  console.log(`I have ${numberOfPokemon} pokemon!`);
 };
+countThem();
 
 const orderThem = () => {
   // order the pokemons alphabetically
+  console.log(pokemon.sort());
 };
+orderThem();
 
 const flipThem = () => {
-  // reverse the order of the pokemons
+  // reverse the order of the pokemon
+  console.log(pokemon.reverse());
 };
+flipThem();
 
 const makeThemBig = () => {
-  // print the pokemons in UPPERCASE letters
+  // print the pokemon in UPPERCASE letters
+  const uppercasePokemon = pokemon.map((x) => x.toUpperCase());
+  console.log(uppercasePokemon);
 };
+makeThemBig();
 
 const onlyTheBs = () => {
-  // only print the pokemons that starts with B
+  // only print the pokemon that starts with B
+  const startB = pokemon.filter((x) => x[0] === "B");
+  console.log(startB);
 };
+
+onlyTheBs()
 
 const notTheCs = () => {
-  // remove all pokemons that starts with C
+  // remove all pokemon that starts with C
+  const noC = pokemon.filter((x) => x[0] != "C");
+  console.log(noC);
+
 };
+notTheCs()
 
 const nameAndIdThanks = () => {
-  // print out name and index of all pokemons
+  // print out name and index of all pokemon
   // like: number x - Squirtle
 };
 
-const catchPokemon = name => {
+const catchPokemon = (name) => {
   // add a pokemon with a name of your choice to the list,
   // print the list so you see its there.
 };
 
-const didICatchIt = name => {
-  // check the pokemons to see if a specific pokemon is in the array
+const didICatchIt = (name) => {
+  // check the pokemon to see if a specific pokemon is in the array
 };
 
 const addInThirdPlace = () => {
